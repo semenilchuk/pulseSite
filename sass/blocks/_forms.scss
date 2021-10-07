@@ -1,0 +1,14 @@
+.feed-form {
+    width: 303px;
+    height: 258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    input {
+        padding: 0 20px;
+        height: 54px;
+        border: none;
+        border-radius: 7px;
+        margin-bottom: 15px;
+    }
+}

@@ -48,6 +48,17 @@
             width: 370px;
         }
     }
+    .consultation {
+        &__header {
+            font-size: 28px;
+        }
+        &__descr {
+            font-size: 18px;
+        }
+    }
+    .carousel__inner {
+        width: 80%;
+    }
     
 }
 @media (max-width: 767px) {
@@ -113,13 +124,19 @@
             font-size: 16px;
         }
     }
-
     .logo {
         display: none;
     }
     .logo_mobile {
         display: block;
     }
+    .consultation {
+        padding: 70px 0;
+        &__header {
+            line-height: 44px;
+        }
+    }
+
 }
 @media (min-width: 767px) {
     .logo_mobile {
@@ -178,5 +195,46 @@
     }
     .logo {
         display: block;
+    }
+    .consultation {
+        padding: 50px 0;
+        min-height: 550px;
+        &__header {
+            font-size: 15px;
+            line-height: 30px;
+        }
+        &__descr {
+            margin-top: 30px;
+            line-height: 18px;
+            font-size: 14px;
+        }
+        &__feed-form {
+            width: 90%;
+            margin-top: 30px;
+        }
+    }
+   .carousel {
+       padding: 60px 0;
+       .slick-dots {
+            button {
+                margin-right: 15px;
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button:nth-child(3) {
+                margin-right: 0;
+            }
+       }
+   }
+}
+@media (min-width:320px) and (max-width:400px) {
+    .carousel {
+        .slick-dots {
+            transform: translateX(-20px);
+        }
     }
 }
