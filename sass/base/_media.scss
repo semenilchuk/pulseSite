@@ -59,7 +59,26 @@
     .carousel__inner {
         width: 80%;
     }
-    
+    .footer {
+        &__info {
+            width: 400px;
+            height: 250px;
+            padding: 50px 68px;
+        }
+        &__addr {
+            margin-bottom: 25px;
+        }
+        &__phone {
+            margin-bottom: 25px;
+        }
+        &__social-item {
+            width: 40px;
+            height: 40px;
+            img {
+                height: 21px;
+            }
+        }
+    }  
 }
 @media (max-width: 767px) {
     .header {
@@ -134,6 +153,48 @@
         padding: 70px 0;
         &__header {
             line-height: 44px;
+        }
+    }
+    .catalog {
+        &__tabs {
+            transform: translateX(-80px);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__tab {
+            margin-bottom: 10px;
+        }
+        &__content {
+            justify-content: space-around;
+        }
+        .catalog-item {
+            margin: 0 15px 20px;
+        }
+    }
+    .feed {
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            img {
+                margin-bottom: 20px;
+            }
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__count {
+            text-align: center;
+        }
+    }
+    .footer {
+        &__info {
+            width: 327px;
+            height: 208px;
+            padding: 32px 50px;
+        }
+        &__addr {
+            font-size: 17px;
+            line-height: 17px;
         }
     }
 
@@ -230,6 +291,28 @@
             }
        }
    }
+   .catalog {
+       padding-bottom: 50px;
+       &__title {
+           line-height: 30px;
+       }
+       &__tabs {
+           margin-top: 40px;
+           transform: translateX(-50px);
+       }
+       &__content {
+           margin-top: 40px;
+       }
+   }
+   .feed {
+       &__item:nth-child(n) {
+           margin-top: 50px;
+       }
+       &__text {
+            margin-left: 20px;
+            padding-right: 20px;
+       }
+   }
 }
 @media (min-width:320px) and (max-width:400px) {
     .carousel {
@@ -238,3 +321,15 @@
         }
     }
 }
+
+@media (min-width:440px) and (max-width:575px) {
+    .catalog {
+        &__tabs {
+            transform: translateX(-60px);
+        }
+    }
+}
+
+
+
+

@@ -10,6 +10,9 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    &:hover {
+        background: rgb(147, 10, 10);
+    }
     &_contacts {
         margin-top: 5px;
     }

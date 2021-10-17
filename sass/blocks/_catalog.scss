@@ -87,9 +87,11 @@
             font-size: 14px;
             line-height: 14px;
             text-align: center;
-            text-decoration-line: underline;
             text-transform: uppercase;
             color: $main-color; 
+            &:hover {
+                text-decoration-line: underline;
+            }
         }
         &__back-link {
             display: block;
@@ -101,9 +103,11 @@
             font-size: 14px;
             line-height: 14px;
             text-align: center;
-            text-decoration-line: underline;
             text-transform: uppercase;
             color: $main-color;
+            &:hover {
+                text-decoration-line: underline;
+            }
         }
         hr {
             border-bottom: none;

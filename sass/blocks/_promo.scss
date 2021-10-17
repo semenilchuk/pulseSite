@@ -51,8 +51,11 @@
         color: #FFFFFF;
         a {
             color: #FFFFFF;
-            text-decoration: underline;
+            text-decoration: none;
             text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
