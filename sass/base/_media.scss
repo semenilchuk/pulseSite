@@ -313,6 +313,33 @@
             padding-right: 20px;
        }
    }
+   .footer {
+        &__info {
+            width: 100%;
+        }
+    }
+    .modal {
+        padding: 20px;
+        width: 75%;
+        &__descr {
+            margin: 20px;
+        }
+        &_feed-form {
+            width: 100%;
+            input {
+                padding: 0 12px;
+                width: 100%;
+                font-size: 14px;
+            }
+            button {
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+    }
+    .modal#order {
+        min-height: 380px;
+    }
 }
 @media (min-width:320px) and (max-width:400px) {
     .carousel {
