@@ -55,7 +55,10 @@ $(document).ready(function(){
                     required: true,
                     minlength: 2
                 },
-                phone: "required",
+                phone: {
+                    required: true,
+                    minlength: 5
+                },
                 email: {
                     required: true,
                     email: true
@@ -66,7 +69,10 @@ $(document).ready(function(){
                     required: "Пожалуйста, введите свое имя",
                     minlength: jQuery.validator.format("Имя должно содержать как минимум {0} символа")
                 },
-                phone: "Пожалуйста, введите номер телефона",
+                phone: {
+                    required: "Пожалуйста, введите свой номер телефона",
+                    minlength: jQuery.validator.format("Номер телефона должен содержать как минимум {0} символов")
+                },
                 email: {
                   required: "Пожалуйста, введите свою почту",
                   email: "Неправильно введен адрес почты"
@@ -80,5 +86,28 @@ $(document).ready(function(){
     validateForm("#order form");
 
     $('input[name=phone]').mask('+7 (999) 999 99 99');
+
+    sendMail('form');
+
+    function sendMail(form) {
+        $(form).submit(function(e) {
+            e.preventDefault();
+            if (!$(this).valid()) {
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: "mailer/smart.php",
+                data: $(this).serialize()
+            }).done(function(){
+                $(this).find("input").val("");
+                $('#consultation, #order').fadeOut();
+                $('.overlay, #thanks').fadeIn();
+    
+                $('form').trigger('reset');
+            });
+            return false;
+        });
+    }
     
   });
