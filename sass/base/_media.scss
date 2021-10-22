@@ -303,6 +303,9 @@
        &__content {
            margin-top: 40px;
        }
+       .catalog-item__list {
+           min-height: 365px;
+       }
    }
    .feed {
        &__item:nth-child(n) {
